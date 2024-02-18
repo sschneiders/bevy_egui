@@ -886,6 +886,7 @@ mod tests {
         winit::WinitPlugin,
         DefaultPlugins,
     };
+    use bevy::utils::default;
 
     #[test]
     fn test_readme_deps() {
@@ -904,6 +905,7 @@ mod tests {
                                 ..Default::default()
                             },
                         ),
+                        ..default()
                     })
                     .build()
                     .disable::<WinitPlugin>(),
